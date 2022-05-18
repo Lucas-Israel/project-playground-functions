@@ -14,27 +14,14 @@ function calcArea(b, h) {
 
 // Desafio 3
 function splitSentence(a) {
-  let b = [];
-  b = a.split('');
-  return b;
+  return a.split(' ');
 }
 
 // Desafio 4
 function concatName(a) {
-  let la = '';
-  for (let i in a) {
-    if (a[i]) {
-      la = a[i];
-    }
-  }
-  let fa = '';
-  for (let i2 in a) {
-    if (a[i2]) {
-      fa = a[i2];
-      break;
-    }
-  }
-  let add = `${la}, ${fa}`;
+  let fa = a[0];
+  let la = a[a.length - 1];
+  let add = la.concat(', ', fa);
   return add;
 }
 
