@@ -8,18 +8,34 @@ function compareTrue(v1, v2) {
 
 // Desafio 2
 function calcArea(b, h) {
-  areaTotal = (b * h) / 2;
+  let areaTotal = (b * h) / 2;
   return areaTotal;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(a) {
+  let b = [];
+  b = a.split('');
+  return b;
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(a) {
+  let la = '';
+  for (let i in a) {
+    if (a[i]) {
+      la = a[i];
+    }
+  }
+  let fa = '';
+  for (let i2 in a) {
+    if (a[i2]) {
+      fa = a[i2];
+      break;
+    }
+  }
+  let add = `${la}, ${fa}`;
+  return add;
 }
 
 // Desafio 5
