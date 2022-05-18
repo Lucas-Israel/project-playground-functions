@@ -27,24 +27,56 @@ function concatName(a) {
 
 // Desafio 5
 function footballPoints(w, t) {
-  let a = w * 3;
-  let b = a + t;
-  return b;
+  let a = w * 3 + t;
+  return a;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(a) {
+  let mn = a[0];
+  let con = 0;
+  for (let i in a) {
+    if (mn < a[i]) {
+      mn = a[i];
+    }
+  }
+  for (let i2 in a) {
+    if (mn === a[i2]) {
+      con += 1;
+    }
+  }
+  return con;
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(m, c1, c2) {
+  let con1 = Math.abs(m - c1);
+  let con2 = Math.abs(m - c2);
+
+  if (con1 === con2) {
+    return 'os gatos trombam e o rato foge';
+  }
+  if (con1 > con2) {
+    return 'cat2';
+  }
+  return 'cat1';
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(a) {
+  let mens = [];
+  for (let i in a) {
+    if (a[i] % 3 === 0 && a[i] % 5 === 0) {
+      mens[i] = 'fizzBuzz';
+    } else if (a[i] % 3 === 0) {
+      mens[i] = 'fizz';
+    } else if (a[i] % 5 === 0) {
+      mens[i] = 'buzz';
+    } else {
+      mens[i] = 'bug!';
+    }
+  }
+  return mens;
 }
 
 // Desafio 9
