@@ -32,20 +32,20 @@ function footballPoints(w, t) {
 }
 
 // Desafio 6
-function highestCount(a) {
-  let mn = a[0];
-  let con = 0;
-  for (let i in a) {
-    if (mn < a[i]) {
-      mn = a[i];
+function highestCount(number) {
+  let maioirNumero = number[0];
+  let contador = 0;
+  for (let index in number) {
+    if (maioirNumero < number[index]) {
+      maioirNumero = number[index];
     }
   }
-  for (let i2 in a) {
-    if (mn === a[i2]) {
-      con += 1;
+  for (let index2 in number) {
+    if (maioirNumero === number[index2]) {
+      contador += 1;
     }
   }
-  return con;
+  return contador;
 }
 
 // Desafio 7
@@ -63,28 +63,59 @@ function catAndMouse(m, c1, c2) {
 }
 
 // Desafio 8
-function fizzBuzz(a) {
-  let mens = [];
-  for (let i in a) {
-    if (a[i] % 3 === 0 && a[i] % 5 === 0) {
-      mens[i] = 'fizzBuzz';
-    } else if (a[i] % 3 === 0) {
-      mens[i] = 'fizz';
-    } else if (a[i] % 5 === 0) {
-      mens[i] = 'buzz';
+function fizzBuzz(array) {
+  let menssagem = [];
+  for (let index in array) {
+    if (array[index] % 3 === 0 && array[index] % 5 === 0) {
+      menssagem[index] = 'fizzBuzz';
+    } else if (array[index] % 3 === 0) {
+      menssagem[index] = 'fizz';
+    } else if (array[index] % 5 === 0) {
+      menssagem[index] = 'buzz';
     } else {
-      mens[i] = 'bug!';
+      menssagem[index] = 'bug!';
     }
   }
-  return mens;
+  return menssagem;
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function strArr(str) {
+  let strSplit = str.split('');
+  return strSplit;
 }
-function decode() {
-  // seu código aqui
+
+function arrStr(arr) {
+  let strPush = arr.join('');
+  return strPush;
+}
+
+function encode(frase) {
+  let stringToArray = strArr(frase);
+  const vogal = ['a', 'e', 'i', 'o', 'u'];
+  const numero = [1, 2, 3, 4, 5];
+  for (let index in stringToArray) {
+    for (let index2 in stringToArray) {
+      if (stringToArray[index2] === vogal[index]) {
+        stringToArray[index2] = numero[index];
+      }
+    }
+  }
+  return arrStr(stringToArray);
+}
+
+function decode(frase) {
+  let stringToArray = strArr(frase);
+  const vogal = ['a', 'e', 'i', 'o', 'u'];
+  const numero = [1, 2, 3, 4, 5];
+  for (let index in stringToArray) {
+    for (let index2 in stringToArray) {
+      if (stringToArray[index2] == numero[index]) {
+        stringToArray[index2] = vogal[index];
+      }
+    }
+  }
+  return arrStr(stringToArray);
 }
 
 // Desafio 10
