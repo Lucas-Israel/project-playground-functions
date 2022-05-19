@@ -90,14 +90,14 @@ function arrStr(arr) {
   return strPush;
 }
 
-const vogal = ['a', 'e', 'i', 'o', 'u'];
+const arrayVogais = ['a', 'e', 'i', 'o', 'u'];
 const arrayNumeros = ['1', '2', '3', '4', '5'];
 
 function encode(frase) {
   let stringToArray = strArr(frase);
-  for (let index in stringToArray) {
-    for (let index2 in stringToArray) {
-      if (stringToArray[index2] === vogal[index]) {
+  for (let index = 0; index < stringToArray.length; index += 1) {
+    for (let index2 = 0; index2 < stringToArray.length; index2 += 1) {
+      if (stringToArray[index2] === arrayVogais[index]) {
         stringToArray[index2] = arrayNumeros[index];
       }
     }
@@ -107,10 +107,10 @@ function encode(frase) {
 
 function decode(frase) {
   let stringToArray = strArr(frase);
-  for (let index in stringToArray) {
-    for (let index2 in stringToArray) {
+  for (let index = 0; index < stringToArray.length; index += 1) {
+    for (let index2 = 0; index2 < stringToArray.length; index2 += 1) {
       if (stringToArray[index2] === arrayNumeros[index]) {
-        stringToArray[index2] = vogal[index];
+        stringToArray[index2] = arrayVogais[index];
       }
     }
   }
