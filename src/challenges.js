@@ -118,8 +118,17 @@ function decode(frase) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(nomTec, nome) {
+  let sort = nomTec.sort();
+  if (nomTec[0] === undefined || nome === undefined || nome === '') {
+    return 'Vazio!';
+  }
+  let arr = [];
+  for (let index = 0; index < nomTec.length; index += 1) {
+    arr.push({ tech: sort[index] });
+    arr[index].name = nome;
+  }
+  return arr;
 }
 
 module.exports = {
