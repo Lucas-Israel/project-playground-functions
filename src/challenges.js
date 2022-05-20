@@ -38,10 +38,8 @@ function highestCount(number) {
   for (let index in number) {
     if (maioirNumero < number[index]) {
       maioirNumero = number[index];
-    }
-  }
-  for (let index2 in number) {
-    if (maioirNumero === number[index2]) {
+      contador = 1;
+    } else if (maioirNumero === number[index]) {
       contador += 1;
     }
   }
@@ -63,20 +61,20 @@ function catAndMouse(m, c1, c2) {
 }
 
 // Desafio 8
+function splitFizz(ara) {
+  if (ara % 15 === 0) {
+    return 'fizzBuzz';
+  } if (ara % 3 === 0) {
+    return 'fizz';
+  } if (ara % 5 === 0) {
+    return 'buzz';
+  } return 'bug!';
+}
+
 function fizzBuzz(array) {
-  let menssagem = [];
-  for (let index in array) {
-    if (array[index] % 3 === 0 && array[index] % 5 === 0) {
-      menssagem[index] = 'fizzBuzz';
-    } else if (array[index] % 3 === 0) {
-      menssagem[index] = 'fizz';
-    } else if (array[index] % 5 === 0) {
-      menssagem[index] = 'buzz';
-    } else {
-      menssagem[index] = 'bug!';
-    }
-  }
-  return menssagem;
+  for (let index = 0; index < array.length; index += 1) {
+    array[index] = splitFizz(array[index]);
+  } return array;
 }
 
 // Desafio 9
