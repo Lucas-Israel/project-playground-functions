@@ -78,41 +78,19 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function strArr(str) {
-  let strSplit = str.split('');
-  return strSplit;
-}
-
-function arrStr(arr) {
-  let strPush = arr.join('');
-  return strPush;
-}
-
 const arrayVogais = ['a', 'e', 'i', 'o', 'u'];
 const arrayNumeros = ['1', '2', '3', '4', '5'];
 
-function encode(frase) {
-  let stringToArray = strArr(frase);
-  for (let index = 0; index < stringToArray.length; index += 1) {
-    for (let index2 = 0; index2 < stringToArray.length; index2 += 1) {
-      if (stringToArray[index2] === arrayVogais[index]) {
-        stringToArray[index2] = arrayNumeros[index];
-      }
-    }
-  }
-  return arrStr(stringToArray);
+function encode(phrase) {
+  for (let index = 0; index < phrase.length; index += 1) {
+    phrase = phrase.replaceAll(arrayVogais[index], arrayNumeros[index]);
+  } return phrase;
 }
 
-function decode(frase) {
-  let stringToArray = strArr(frase);
-  for (let index = 0; index < stringToArray.length; index += 1) {
-    for (let index2 = 0; index2 < stringToArray.length; index2 += 1) {
-      if (stringToArray[index2] === arrayNumeros[index]) {
-        stringToArray[index2] = arrayVogais[index];
-      }
-    }
-  }
-  return arrStr(stringToArray);
+function decode(phrase) {
+  for (let index = 0; index < phrase.length; index += 1) {
+    phrase = phrase.replaceAll(arrayNumeros[index], arrayVogais[index]);
+  } return phrase;
 }
 
 // Desafio 10
