@@ -4,8 +4,11 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+
+function triangleCheck(a, b, c) {
+  let d = b + c;
+  let e = b - c;
+  return (a < d && a > Math.abs(e));
 }
 
 // Desafio 13
