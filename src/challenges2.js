@@ -2,25 +2,31 @@
 function isInvalid1(arr) {
   for (let index = 0; index < arr.length; index += 1) {
     if (arr[index] > 9 || arr[index] < 0) {
-      return false;
+      return 'invalid';
     }
   }
-  return true;
+  return 'valid';
 }
 
-function isInvalid2(arr) {
-  for (let index = 0; index < arr.length; index += 1) {
-    let repete = 0;
-    for (let index2 = 0; index2 < arr.length; index2 += 1) {
-      if (arr[index] === arr[index2]) {
-        repete += 1;
-      }
-    }
-    if (repete > 2) {
-      return false;
+function isInvalid2(i, arr) {
+  let contador = 0;
+  for (let o = 0; o < arr.length; o += 1) {
+    if (arr[i] === arr[o]) {
+      contador += 1;
     }
   }
-  return true;
+  if (contador > 2) {
+    return true;
+  }
+}
+
+function isInvalid3(arr) {
+  for (let i = 0; i < arr.length; i += 1) {
+    if (isInvalid2(i, arr)) {
+      return 'invalid';
+    }
+  }
+  return 'valid';
 }
 
 function generatePhoneNumber(arr) {
@@ -29,7 +35,7 @@ function generatePhoneNumber(arr) {
   if (arr.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
-  if (isInvalid1(arr) === false || isInvalid2(arr) === false) {
+  if (isInvalid1(arr) === 'invalid' || isInvalid3(arr) === 'invalid') {
     return 'não é possível gerar um número de telefone com esses valores';
   }
   if (arr.length === 11) {
