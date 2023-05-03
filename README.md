@@ -1,10 +1,27 @@
-# :construction: README em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto.
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+# :open_book: Objetivo do projeto playground functions
+
+```
+1. Desenvolver funções de comparações, condições, calculos, concatenação, listagem, etc.
+```
+# :heavy_exclamation_mark: Arquivos que desenvolvi nesse projeto:
+
+```
+challenges.js
+challenges2.js
+```
+
+#### :warning: todos os outros arquivos foram desenvolvidos pela [Trybe](https://www.betrybe.com).
+
+
+# :thinking: Como checar o projeto
+
+```
+git clone git@github.com:Lucas-Israel/project-playground-functions.git
+npm install
+npm test
+```
+
+
+# :trophy: Percentual de conclusão do projeto
+
+![Captura de tela de 2023-05-03 12-48-09](https://user-images.githubusercontent.com/104790267/235969808-1035c55b-c502-4ae5-8ab2-595635008afc.png)
