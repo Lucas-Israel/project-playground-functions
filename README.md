@@ -18,7 +18,7 @@ challenges2.js
 ```
 git clone git@github.com:Lucas-Israel/project-playground-functions.git
 npm install
-rodar index.html
+usar as funções dos arquivos challenges.js e challenges2.js
 ```
 
 # :calendar: Datas para desenvolvimento
